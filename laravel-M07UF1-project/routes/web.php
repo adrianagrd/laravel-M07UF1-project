@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+
+    return view('mostrarProducte');
+
 });
+ //Route::get('/afegirProducte', 'afegirProducte@afegirProducte');
+ Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirProducte');
+
+  Route::post('/mostrarProducte', [mostrarProducte::class, 'mostrarProducte'])->name('afegirProducte');
