@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h1>Lista de Productes</h1> 
+        <a href="{{route('afegirProducteForm')}}" class="btn btn-primary">Afegir nou producte</a>
         <div class="row">
             @foreach ($productes as $producte) 
         <div class="col-md-4">

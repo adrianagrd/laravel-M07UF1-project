@@ -18,6 +18,10 @@ use App\Http\Controllers\mostrarProducte;
 // });
 
 Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
- //Route::get('/afegirProducte', 'afegirProducte@afegirProducte');
- Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirProducte');
+
+Route::post('/', [afegirProducte::class,'afegirProducte'])->name('afegirform');
+Route::get('/afegirproducte', function () {
+     return view('form');
+ })->name('afegirProducteForm');
+ //Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirProducte');
 

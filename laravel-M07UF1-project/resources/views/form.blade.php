@@ -1,4 +1,4 @@
-<form action="{{ route('afegirProducte') }}" method="POST">
+<form action="{{ route('afegirForm') }}" method="POST">
 
         <input type="text" name="nom" placeholder="Nombre del producto" class="form-control mb-2" autofocus>
         <input type="text" name="descripcio" placeholder="Descripción del producto" class="form-control mb-2">

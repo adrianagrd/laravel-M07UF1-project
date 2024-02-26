@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Producte;
 
 class afegirProducte extends Controller
 {
@@ -18,6 +19,7 @@ class afegirProducte extends Controller
         return response()->json([
             "message" => "producte afegit"
         ], 201);
+        redirect()->route('main');
     }
 }
 ?>
