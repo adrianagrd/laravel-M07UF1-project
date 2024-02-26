@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\mostrarProducte;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-
-    return view('mostrarProducte');
-
-});
+Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
  //Route::get('/afegirProducte', 'afegirProducte@afegirProducte');
  Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirProducte');
 
-  Route::post('/mostrarProducte', [mostrarProducte::class, 'mostrarProducte'])->name('afegirProducte');

@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producte;
-
-class mostrarProducte extends Controller
+class test extends Controller
 {
     public function mostrarProductes(){
 
@@ -14,4 +13,3 @@ class mostrarProducte extends Controller
         return view('main', ['productes' => $productes]);
     }
 }
-?>

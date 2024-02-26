@@ -10,21 +10,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Lista de Productes</h1> <php ?>
+        <h1>Lista de Productes</h1> 
         <div class="row">
-            <?php foreach ($productes as $producte) ?>
+            @foreach ($productes as $producte) 
         <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <img src="{{ $producte->imatge }}" class="bd-placeholder-img card-img-top" width="100%" height="225">
                     <div class="card-body">
-                        <h5 class="card-title"> <php {{ $producte->nom }} ?> </h5>
-                        <p class="card-text"> <php {{ $producte->descripcio }} ?></p>
-                        <p class="card-text"> <php Preu: {{ $producte->preu }} ?></p>
-                        <p class="card-text"> <php Stock: {{ $producte->stock }} ?></p>
+                        <h5 class="card-title">{{ $producte->nom }}</h5>
+                        <p class="card-text"> {{ $producte->descripcio }} </p>
+                        <p class="card-text"> Preu: {{ $producte->preu }} </p>
+                        <p class="card-text"> Stock: {{ $producte->stock }} </p>
                     </div>
                 </div>
             </div>
-           <php @endforeach
+            @endforeach
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
