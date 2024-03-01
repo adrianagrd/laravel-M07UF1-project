@@ -16,8 +16,11 @@ use App\Http\Controllers\mostrarProducte;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/afegirproducte', function () {
+    return view('form');
+})->name('afegirProducteForm');
+
+Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirProducte');
 
 Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
- //Route::get('/afegirProducte', 'afegirProducte@afegirProducte');
- Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirProducte');
-
+?>
