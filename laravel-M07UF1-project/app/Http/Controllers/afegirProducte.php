@@ -21,5 +21,10 @@ class afegirProducte extends Controller
         ], 201);
         redirect()->route('main');
     }
+    public function index()
+    {
+        return redirect()->route('main');
+    }
+
 }
 ?>

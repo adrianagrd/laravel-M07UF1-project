@@ -16,6 +16,8 @@ use App\Http\Controllers\mostrarProducte;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/',[MainController::class, 'index']);
+// Route::get('/', 'MainController')->name('main');
 
 Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
 
