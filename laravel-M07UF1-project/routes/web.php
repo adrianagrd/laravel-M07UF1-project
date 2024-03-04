@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mostrarProducte;
+use App\Http\Controllers\afegirProducte;
+use App\Http\Controllers\MainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,19 +16,17 @@ use App\Http\Controllers\mostrarProducte;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/',[MainController::class, 'index']);
-// Route::get('/', 'MainController')->name('main');
+
+
+Route::get('/main', [MainController::class, 'index'])->name('main');
 
 Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
 
-Route::post('/', [afegirProducte::class,'afegirProducte'])->name('afegirform');
+Route::post('/Productenou', [afegirProducte::class,'afegirProductes'])->name('afegirForm');
 
 Route::get('/afegirproducte', function () {
      return view('form');
  })->name('afegirProducteForm');
 
-Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirForm');
+// Route::post('/afegirProducte', [afegirProducte::class, 'afegirProducte'])->name('afegirForm');
 
