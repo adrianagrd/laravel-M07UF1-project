@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,14 @@
                 <div class="card mb-4 shadow-sm">
                     <img src="{{ $producte->imatge }}" class="bd-placeholder-img card-img-top" width="100%" height="225">
                     <div class="card-body">
+                        <form method="post" action="{{ route('eliminarProducteForm')}}">
+                          @csrf    
+                        <input type="hidden" name="id" value="{{$producte->id}}">
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <img src="./imatges/trash-can.png" alt="Eliminar">
+                            </button>
+                        </form>
+
                         <h5 class="card-title">{{ $producte->nom }}</h5>
                         <p class="card-text"> {{ $producte->descripcio }} </p>
                         <p class="card-text"> Preu: {{ $producte->preu }} </p>
