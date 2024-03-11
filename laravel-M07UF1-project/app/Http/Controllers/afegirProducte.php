@@ -13,7 +13,7 @@ class afegirProducte extends Controller
             'descripcio'=>$request->input('descripcio'),
             'preu'=>$request->input('preu'),
             'stock'=>$request->input('stock'),
-            'imatge'=>$request->file('imatge')->store('imatge')
+            'imatge'=>$request->file('imatge')->store('imatges')
         ]); 
 return redirect()->route('mostrarProducte');
      

@@ -20,7 +20,7 @@ use App\Http\Controllers\MainController;
 
 Route::get('/main', [MainController::class, 'index'])->name('main');
 
-Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
+Route::get('/main', [mostrarProducte::class, 'mostrarProductes'])->name('mostrarProducte');
 
 Route::post('/Productenou', [afegirProducte::class,'afegirProductes'])->name('afegirForm');
 
