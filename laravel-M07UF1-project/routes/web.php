@@ -31,3 +31,11 @@ Route::get('/afegirproducte', function () {
  })->name('afegirProducteForm');
 
 Route::post('/main', [eliminarProducte::class, 'eliminarProductes'])->name('eliminarProducteForm');
+Route::get('/', [mostrarProducte::class, 'mostrarProductes']);
+
+Route::get('/editarproducte/{id}', [afegirProducte::class, 'editarProducteForm'])->name('editarProducteForm');
+
+
+
+
+?>
