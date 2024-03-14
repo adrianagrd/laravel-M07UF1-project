@@ -13,6 +13,8 @@
     <header>
         <h1 class="text-center" >Supermercat</h1>
     </header>
+    <div class="title-cataleg-productes">CATÀLEG DE PRODUCTES</div>
+    <div class="separacion"></div>
     <div class="container">        
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,10 +48,12 @@
                         <img src="{{ $producte->imatge }}" class="card-img-top" alt="{{ $producte->nom }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $producte->nom }}</h5>
-                            <p class="card-text">{{ $producte->descripcio }}</p>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ $producte->descripcio }}</h6>
                             <p class="card-text">Precio: {{ $producte->preu }}</p>
-                            <p class="card-text">Stock: {{ $producte->stock }}</p>
-                            <a href="#" class="btn btn-primary" >Comprar</a>
+                            <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            Stock: {{ $producte->stock }}
                         </div>
                     </div>
                 </div>

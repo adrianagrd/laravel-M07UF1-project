@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Producte;
 
 class afegirProducte extends Controller
 {
-    public function afegirProducte(Request $request)
+    public function afegirProducteNou(Request $request)
     {
         $producte = new Producte;
         $producte->nom = $request->nom;
@@ -18,6 +19,15 @@ class afegirProducte extends Controller
         return response()->json([
             "message" => "producte afegit"
         ], 201);
+    }
+    public function editarProducteForm($id){
+        $producte = Producte::find($id);
+    
+        if (!$producte) {
+            return back()->with('error', 'No se encontró el producto con el ID proporcionado.');
+        }
+    
+        return view('editarProducte',['producte'=>$producte]);
     }
 }
 ?>
