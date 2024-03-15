@@ -51,8 +51,14 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{ $producte->descripcio }}</h6>
                             <p class="card-text">Precio: {{ $producte->preu }}</p>
                             <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a>
-                            <a class="btn a-editar"href="{{route('eliminarProducteForm', ['id'=>$producte->id])}}"> 
-<img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20" >                            </a>
+                            <a class="btn a-editar" href="{{route('eliminarProductes', ['id'=>$producte->id])}}" onclick="event.preventDefault(); document.getElementById('eliminar-producte-form-{{ $producte->id }}').submit();">
+                            <img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20">
+                        </a>
+                        <form id="eliminar-producte-form-{{ $producte->id }}" action="{{ route('eliminarProductes') }}" method="POST" style="display: none;">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $producte->id }}">
+                        </form>
+
                         </div>
                         <div class="card-footer text-muted">
                             Stock: {{ $producte->stock }}
