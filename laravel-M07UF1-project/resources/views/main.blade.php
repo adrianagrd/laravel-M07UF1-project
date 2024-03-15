@@ -23,15 +23,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-arrow-left"></i> Atrás</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <div class="mx-auto order-0">
-                    <form class="form-inline my-2 my-lg-0" action="/buscar" method="GET">
+                    <!-- <form class="form-inline my-2 my-lg-0" action="/buscar" method="GET">
                         <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos" aria-label="Search" name="q">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
+                    </form> -->
                 </div>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -53,11 +53,11 @@
                             <!-- <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a> -->
                             <a class="btn a-editar" href="{{route('eliminarProductes', ['id'=>$producte->id])}}" onclick="event.preventDefault(); document.getElementById('eliminar-producte-form-{{ $producte->id }}').submit();">
                             <img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20">
-                        </a>
-                        <form id="eliminar-producte-form-{{ $producte->id }}" action="{{ route('eliminarProductes') }}" method="POST" style="display: none;">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $producte->id }}">
-                        </form>
+                            </a>
+                            <form id="eliminar-producte-form-{{ $producte->id }}" action="{{ route('eliminarProductes') }}" method="POST" style="display: none;">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $producte->id }}">
+                            </form>
 
                         </div>
                         <div class="card-footer text-muted">
