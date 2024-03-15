@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,8 +51,8 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{ $producte->descripcio }}</h6>
                             <p class="card-text">Precio: {{ $producte->preu }}</p>
                             <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a>
-                            <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> 
-<img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20">                            </a>
+                            <a class="btn a-editar"href="{{route('eliminarProducteForm', ['id'=>$producte->id])}}"> 
+<img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20" >                            </a>
                         </div>
                         <div class="card-footer text-muted">
                             Stock: {{ $producte->stock }}

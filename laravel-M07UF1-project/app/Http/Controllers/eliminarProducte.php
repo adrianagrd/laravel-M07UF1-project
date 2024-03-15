@@ -3,20 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Producte; 
 
 class eliminarProducte extends Controller
 {
     public function eliminarProductes(Request $request)
     {
-        /*
-       Producte::delete([
-            'id'=>$request->input('id'),
-           
-        ]);
-        */
+        // Obtener el ID del producto a eliminar desde la solicitud
+        $id = $request->input('id');
+        
+        // Buscar el producto por su ID y eliminarlo
+        $producte = Producte::find($id);
+        if ($producte) {
+            $producte->delete();
+        }
+        
+        // Redireccionar a la página de mostrar productos
         return redirect()->route('mostrarProducte');
+    }
 }
-}
-// 1- el boto ha de ser una peticio en post amb el id del producte 
-// 2- el controlador ha de rebre el id del producte i fer un delete 
-// on el id del producte sigui igual al id del producte que rebem
+?>
