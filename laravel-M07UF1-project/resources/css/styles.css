@@ -1,35 +1,85 @@
 /* página principal: catálogo de productos */
-.a-editar{
-    background: #FF9B26 !important;
-    color: black !important;
-    
-}
-.a-custom{
-    background: #FF9B26 !important;
+.a-editar {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #ff9b26 !important;
     color: white !important;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    border-radius: 8px;
 }
-.card{
-    margin: 20px auto !important;
-    box-shadow: 0 40px 6px rgba(0, 0, 0, 0.1) !important;
+.navbar {
+    background-color: lightgray;
+    border-radius: 10px;
 }
-.card-title{
-    margin-bottom: 0 !important; 
+.a-eliminar {
+    margin: 10px 10px !important;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.card-subtitle{
+.a-custom {
+    background: #ff9b26 !important;
+    color: white !important;
+}
+
+.form-control {
+    width: 360px !important;
+}
+
+.card {
+    margin: 20px auto !important;
+    border-radius: 10px;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-img-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    object-fit: cover !important;
+}
+
+.card-title {
+    font-size: medium;
+    font-weight: normal !important;
+    margin: 0px 0px 10px 0px !important;
+}
+
+.card-subtitle {
     margin-top: 0 !important;
 }
 
-.card-text{
+.card-body {
+    margin: 0px 0px 0px 0px !important;
+}
+
+.card-text {
     margin-bottom: 1rem !important;
 }
-.card-footer{
+
+.card-text-price {
+    font-weight: bolder;
+    font-weight: 800;
+}
+
+.card-text-stock {
+    font-weight: 800;
+}
+.card-footer {
     padding: 0.75rem 1.25rem !important;
     background-color: rgba(0, 0, 0, 0.03) !important;
     border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
 }
 
-.separacion{
+.separacion {
     height: 2px !important;
     width: 88% !important;
     color: black !important;
@@ -37,10 +87,16 @@
     border-radius: 10px !important;
     margin: 20px auto !important;
 }
-.title-cataleg-productes{
+
+.title-cataleg-productes {
     display: flex !important;
     flex-direction: row-reverse !important;
     padding-right: 75px !important;
     font-weight: bold;
 }
 
+.title-super {
+    font-size: 25px !important;
+    font-weight: bold !important;
+    margin: 20px 0px 20px 0px !important;
+}

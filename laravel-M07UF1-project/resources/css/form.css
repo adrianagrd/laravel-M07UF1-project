@@ -1,17 +1,21 @@
 .container {
     display: flex;
-    justify-content: center;
+    margin-top: 20px;
+    background-color: #ff9b26 !important;
+    border-radius: 10px;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    gap: 20px;
+    height: 80vh;
+    border: 5px solid #fddd8c;
+    width: 50%;
 }
+
 h1 {
     margin-bottom: 5%;
     border-bottom: 3px solid black;
 }
 
-.form-control{
+.form-control {
     width: 60% !important;
 }
 
@@ -57,4 +61,36 @@ h1 {
 
 .product-stock {
     color: #666 !important;
+}
+
+.form-group-add {
+    padding: 5px;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 60% !important;
+}
+
+.form-group-add li {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    list-style: none !important;
+    font-weight: 800 !important;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.full-span {
+    grid-column: span 4;
+}
+.half-span {
+    grid-column: span 2;
+}
+.quarter-span {
+    grid-column: span 1;
 }
