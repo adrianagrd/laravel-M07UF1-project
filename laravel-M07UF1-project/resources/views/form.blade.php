@@ -9,16 +9,16 @@
 </head>
 <body>
 
-<form method="POST" action="{{ route('afegirForm') }}" enctype='multipart/form-data' class="container">
+<form method="POST" action="{{ isset($producte) ? route('editarProduceForm', ['id' => $producte->id]) : route('afegirForm') }}" enctype='multipart/form-data' class="container">
     @csrf        
-    <h1 class="text-center">Introduce la información del producto</h1>
-    <input type="text" name="nom" placeholder="Nombre del producto" class="form-control mb-2" autofocus>
-    <input type="text" name="descripcio" placeholder="Descripción del producto" class="form-control mb-2">
-    <input type="number" name="preu" placeholder="Precio del producto" class="form-control mb-2">
-    <input type="number" name="stock" placeholder="Stock del producto" class="form-control mb-2">
+    <h1 class="text-center">{{ isset($producte) ? 'Editar producto' : 'Añadir producto' }}</h1>
+    <input type="text" name="nom" placeholder="Nombre del producto" class="form-control mb-2" autofocus  value="{{ $producte->nom ?? '' }}">
+    <input type="text" name="descripcio" placeholder="Descripción del producto" class="form-control mb-2" value="{{ $producte->descripcio ?? '' }}">
+    <input type="number" name="preu" placeholder="Precio del producto" class="form-control mb-2" value="{{ $producte->preu ?? '' }}">
+    <input type="number" name="stock" placeholder="Stock del producto" class="form-control mb-2" value="{{ $producte->stock ?? '' }}">
     <input type="file" name="imatge" placeholder="Imagen del producto" class="form-control mb-2">
 
-    <input type='submit' value='Crear nuevo producto' class="btn btn-primary btn-block mt-2">
+    <input type='submit' value='Crear nuevo producto' class="btn btn-primary btn-block mt-2" value='{{ isset($producte) ? 'Actualizar producto' : 'Crear nuevo producto' }}'>
 </form>
 
 <!-- Enlace a Bootstrap JS -->

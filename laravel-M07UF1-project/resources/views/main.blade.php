@@ -24,13 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-arrow-left"></i> Atrás</a>
+                        {{-- <a class="nav-link" href="#"><i class="fas fa-arrow-left"></i> Atrás</a> --}}
                     </li>
                 </ul>
                 <div class="mx-auto order-0">
-                    <form class="form-inline my-2 my-lg-0" action="/buscar" method="GET">
+                    <form class="form-inline my-2 my-lg-0" action="{{ route('buscarProducte') }}" method="GET">
                         <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos" aria-label="Search" name="q">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar producte</button>
                     </form>
                 </div>
                 <ul class="navbar-nav ml-auto">
@@ -50,7 +50,7 @@
                             <h5 class="card-title">{{ $producte->nom }}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">{{ $producte->descripcio }}</h6>
                             <p class="card-text">Precio: {{ $producte->preu }}</p>
-                            <!-- <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a> -->
+                            <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a> 
                             <a class="btn a-editar" href="{{route('eliminarProductes', ['id'=>$producte->id])}}" onclick="event.preventDefault(); document.getElementById('eliminar-producte-form-{{ $producte->id }}').submit();">
                             <img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20">
                         </a>
