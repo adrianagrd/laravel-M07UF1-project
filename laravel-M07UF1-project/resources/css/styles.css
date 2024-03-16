@@ -3,8 +3,8 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-    background: #ff9b26 !important;
-    color: white !important;
+    background: #ff9b26;
+    color: white;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -17,20 +17,20 @@
     border-radius: 10px;
 }
 .a-eliminar {
-    margin: 10px 10px !important;
+    margin: 10px 10px;
     display: flex;
     justify-content: flex-end;
 }
 
 .a-custom {
-    background: #ff9b26 !important;
-    color: white !important;
+    background: #ff9b26;
+    color: white;
 }
 
 .card {
-    margin: 20px auto !important;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
@@ -40,25 +40,25 @@
     height: 150px;
     width: 100%;
     padding: 0px 20px 0px 20px;
-    object-fit: cover !important;
+    object-fit: cover;
 }
 
 .card-title {
     font-size: medium;
-    font-weight: normal !important;
-    margin: 0px 0px 10px 0px !important;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
 }
 
 .card-subtitle {
-    margin-top: 0 !important;
+    margin-top: 0;
 }
 
 .card-body {
-    margin: 0px 0px 0px 0px !important;
+    margin: 0px 0px 0px 0px;
 }
 
 .card-text {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem;
 }
 
 .card-text-price {
@@ -70,29 +70,33 @@
     font-weight: 800;
 }
 .card-footer {
-    padding: 0.75rem 1.25rem !important;
-    background-color: rgba(0, 0, 0, 0.03) !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.125) !important;
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .separacion {
-    height: 2px !important;
-    width: 88% !important;
-    color: black !important;
-    background-color: black !important;
-    border-radius: 10px !important;
-    margin: 20px auto !important;
+    height: 2px;
+    width: 88%;
+    color: black;
+    background-color: black;
+    border-radius: 10px;
+    margin: 20px auto;
 }
 
 .title-cataleg-productes {
-    display: flex !important;
-    flex-direction: row-reverse !important;
-    padding-right: 75px !important;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 75px;
     font-weight: bold;
 }
 
 .title-super {
-    font-size: 25px !important;
-    font-weight: bold !important;
-    margin: 20px 0px 20px 0px !important;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+}
+
+.form-control-search {
+    width: 360px !important;
 }

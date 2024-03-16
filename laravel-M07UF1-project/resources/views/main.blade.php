@@ -31,7 +31,7 @@
                 </ul>
                 <div class="mx-auto order-0">
                     <form class="form-inline my-2 my-lg-0" action="/buscar" method="GET">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Busca un producte: (tovalloletes, xampú, etc)" aria-label="Search" name="q">
+                        <input class="form-control form-control-search mr-sm-2" type="search" placeholder="Busca un producte: (tovalloletes, xampú, etc)" aria-label="Search" name="q">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                     </form> 
                 </div>
