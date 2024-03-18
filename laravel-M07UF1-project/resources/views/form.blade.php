@@ -13,8 +13,14 @@
 </head>
 <body>
     <header>
-        <br/>
-        <div class="title-cataleg-productes">AFEGIR PRODUCTE</div>
+        <br>
+        <h5 class="title-cataleg-productes">
+            @if(Request::is('*/edit'))
+                EDITAR PRODUCTE
+            @else
+                AFEGIR PRODUCTE
+            @endif
+        </h5>
     </header>
     <div class="separacion"></div>
 

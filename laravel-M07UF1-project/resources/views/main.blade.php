@@ -13,12 +13,11 @@
 <body>
     <header>
         <h1 class="title-super text-center">SUPERMERCAT</h1>
-        <div class="title-cataleg-productes">CATÀLEG DE PRODUCTES</div>
+        <h5 class="title-cataleg-productes">CATÀLEG DE PRODUCTES</h5>
     </header>
-    
+
     <div class="separacion"></div>
     <div class="container">        
-
         <nav class="navbar navbar-expand-lg ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
