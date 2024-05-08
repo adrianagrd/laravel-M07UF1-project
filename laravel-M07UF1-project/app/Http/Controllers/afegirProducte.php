@@ -18,6 +18,18 @@ class afegirProducte extends Controller
 return redirect()->route('mostrarProducte');
      
   }
+
+    public function editarProducteForm($id)
+    {
+        $producte = Producte::find($id);
+
+        if (!$producte) {
+            return back()->with('error', 'No se encontró el producto con el ID proporcionado.');
+        }
+
+        return view('editarProducte', ['producte' => $producte]);
+    }
+
 }
 
 ?>

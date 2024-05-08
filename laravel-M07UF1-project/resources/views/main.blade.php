@@ -49,6 +49,13 @@
                 <div class="col-sm-4">
                     <div class="card">
                         <a class="btn a-eliminar" href="{{route('eliminarProductes', ['id'=>$producte->id])}}" onclick="event.preventDefault(); document.getElementById('eliminar-producte-form-{{ $producte->id }}').submit();">
+                        <img src="{{ $producte->imatge }}" class="card-img-top" alt="{{ $producte->nom }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $producte->nom }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ $producte->descripcio }}</h6>
+                            <p class="card-text">Precio: {{ $producte->preu }}</p>
+                            <a class="btn a-editar" href="{{ route('afegirProducteForm', ['id'=>$producte->id]) }}"> Editar </a> 
+                            <a class="btn a-editar" href="{{route('eliminarProductes', ['id'=>$producte->id])}}" onclick="event.preventDefault(); document.getElementById('eliminar-producte-form-{{ $producte->id }}').submit();">
                             <img src="{{ asset('imatges/trash-can.png') }}" alt="Eliminar" width="20" height="20">
                             </a>
                             <form id="eliminar-producte-form-{{ $producte->id }}" action="{{ route('eliminarProductes') }}" method="POST" style="display: none;">
